@@ -6,7 +6,8 @@ The TYPO3 LCMS is a customer centric and future-proof Learning Content Managemen
 
 ## Installation
 
-The best way to get started with the LCMS is to install TYPO3 using DDEV, Docker and Composer on your local machine (also refer to [](https://docs.typo3.org/m/typo3/tutorial-getting-started/12.4/en-us/Index.html#)).
+The best way to get started with the LCMS is to install TYPO3 using DDEV, Docker and Composer on your local machine (also refer to [
+TYPO3 - Getting Started Tutorial](https://docs.typo3.org/m/typo3/tutorial-getting-started/12.4/en-us/Index.html#)).
 
 ### Pre-Installation Checklist
 
