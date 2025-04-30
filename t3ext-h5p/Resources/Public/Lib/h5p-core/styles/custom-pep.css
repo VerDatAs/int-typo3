@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&display=swap');
+
+html.h5p-iframe,
+html.h5p-iframe>body {
+  font-family: "Nunito Sans" !important;
+}
+
+.h5p-agamotto .h5p-agamotto-passepartout-horizontal {
+  padding: 0 !important;
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button,
+.h5peditor .h5p-joubelui-button,
+.h5p-joubelui-button {
+  border-radius: 5px !important;
+  background: #840DBF !important;
+  color: #ffffff !important;
+}
+
+.card-footer svg path {
+  color: #840DBF !important;
+}
+
+.card-footer svg {
+  cursor: pointer;
+}
+
+.h5peditor .h5p-questionnaire-button,
+.h5p-questionnaire-button {
+  background: #840DBF !important;
+  border-width: 0 !important;
+}
+
+html.h5p-iframe .h5p-container.h5p-questionnaire-wrapper,
+.h5p-documentation-tool {
+  overflow: hidden;
+  /* border: 1px solid #ddd !important;
+    border-radius: 5px !important; */
+}
+
+.h5p-questionnaire-footer {
+  background: #fff !important;
+  border-width: 0 !important;
+}
+
+.joubel-simple-rounded-button {
+  background: #840DBF !important;
+  border-radius: 5px !important;
+}
+
+.h5p-joubelui-score-bar-progress {
+  background: none !important;
+  background-color: rgb(200, 165, 175) !important;
+}
+
+.h5p-simple-multiple-choice-question,
+.h5p-questionnaire-required-symbol {
+  background: #004A78 !important;
+}
+
+.h5p-questionnaire-element .h5p-subcontent-body {
+  font-size: 1.5em !important;
+}
+
+.h5p-simple-multiple-choice-alternative-input {
+  margin: 0 10px 2px 5px !important;
+}
+
+.h5p-true-false-answer {
+  background: #840DBF !important;
+  border-color: initial !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.progress-dot.answered {
+  background: #840DBF !important;
+}
+
+.progress-dot {
+  border: 1px solid #840DBF !important;
+}
+
+.h5p-content-user-data-reset-dialog {
+  display: none;
+}
+
+.h5p-questionnaire-progress-bar-current {
+  background: #97BF0D !important;
+}
+
+.h5p-questionnaire-progress-bar-widget-current {
+  color: #97BF0D !important;
+}
+
+.h5p-documentation-tool-footer {
+  display: none;
+}

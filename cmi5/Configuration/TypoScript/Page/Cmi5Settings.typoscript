@@ -1,0 +1,68 @@
+page.10.settings.config {
+  cmiObjpropLang = {$bootstrap.config.cmiObjpropLang}
+  cmiDatamodelAuActtype = {$bootstrap.config.cmiDatamodelAuActtype}
+  cmiDatamodelAuTitle = {$bootstrap.config.cmiDatamodelAuTitle}
+  cmiDatamodelAuDescr = {$bootstrap.config.cmiDatamodelAuDescr}
+  cmiDatamodelAuId = {$bootstrap.config.cmiDatamodelAuId}
+  cmiDatamodelAuMoveon = {$bootstrap.config.cmiDatamodelAuMoveon}
+  cmiDatamodelAuMasteryscore = {$bootstrap.config.cmiDatamodelAuMasteryscore}
+  cmiDatamodelAuUrl = {$bootstrap.config.cmiDatamodelAuUrl}
+  cmiDatamodelCourseTitle = {$bootstrap.config.cmiDatamodelCourseTitle}
+  cmiDatamodelCourseDescr = {$bootstrap.config.cmiDatamodelCourseDescr}
+  cmiDatamodelCourseId = {$bootstrap.config.cmiDatamodelCourseId}
+  cmiEnabled = {$bootstrap.config.cmiEnabled}
+}
+config {
+  compressCss = 0
+  compressJs = 0
+  concatenateCss = 0
+  concatenateJs = 0
+  moveJsFromHeaderToFooter = 0
+}
+
+page {
+	includeCSS {
+        plyrCss = https://cdn.plyr.io/3.7.8/plyr.css
+      	custom3Css = EXT:cmi5/Resources/Public/CmiFive/Css/custom3.css
+        #swordCss = https://unpkg.com/spoken-word/css/style.css
+        bsicons = /fileadmin/bootstrap-icons/bootstrap-icons.css
+	}
+  includeJSFooter.cmi5Settings = EXT:cmi5/Resources/Public/CmiFive/Js/cmi5Settings.js
+	includeJS {
+        JSZip = EXT:cmi5/Resources/Public/CmiFive/Js/jszip.min.js
+        cmi5Controller = EXT:cmi5/Resources/Public/CmiFive/Js/cmi5Controller-new.js
+        #xapiDashboard = EXT:cmi5/Resources/Public/CmiFive/Js/xapidashboard.js
+        xapiCollection = EXT:cmi5/Resources/Public/CmiFive/Js/xapicollection.js
+        cryptojs = EXT:cmi5/Resources/Public/CmiFive/Js/cryptojs_v3.1.2.js
+        twix = EXT:cmi5/Resources/Public/CmiFive/Js/twix.min.js
+        utf8TextEncoding = EXT:cmi5/Resources/Public/CmiFive/Js/utf8-text-encoding.js
+        activitytypes = EXT:cmi5/Resources/Public/CmiFive/Js/activitytypes.js
+        verbs = EXT:cmi5/Resources/Public/CmiFive/Js/verbs.js
+        xapiwrapper= EXT:cmi5/Resources/Public/CmiFive/Js/xapiwrapper.js
+        lzstring = https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.js
+        xapistatement = EXT:cmi5/Resources/Public/CmiFive/Js/xapistatement.js
+        xapiUtil = EXT:cmi5/Resources/Public/CmiFive/Js/xapi-util.js
+        xapiLaunch = EXT:cmi5/Resources/Public/CmiFive/Js/xapi-launch.js
+        #lifecycle = EXT:cmi5/Resources/Public/CmiFive/Js/lifecycle.es5.js
+        cmi5Wrapper = EXT:cmi5/Resources/Public/CmiFive/Js/cmi5Wrapper-new.js
+        cmi5VideoWrapper = EXT:cmi5/Resources/Public/CmiFive/Js/cmi5VideoWrapper.js
+        #xmlwriter = EXT:cmi5/Resources/Public/CmiFive/Js/XMLWriter.js
+        cmi5xml = EXT:cmi5/Resources/Public/CmiFive/Js/cmi5xml.js
+        echarts = https://cdn.jsdelivr.net/npm/echarts@5.3.0-rc.1/dist/echarts.min.js
+        textHighlighter = EXT:cmi5/Resources/Public/CmiFive/Js/TextHighlighter.js
+        progressCircle = https://pie-meister.github.io/PieMeister-with-Progress.min.js
+       	plyrJs = https://cdn.plyr.io/3.7.8/plyr.js
+        echarts = https://cdn.jsdelivr.net/npm/echarts@5.3.0-rc.1/dist/echarts.min.js
+        swal = EXT:cmi5/Resources/Public/CmiFive/Js/sweetalert.min.js
+        moment = EXT:cmi5/Resources/Public/CmiFive/Js/moment.min.js
+        bubble = https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.6/fabric.min.js
+        #sword = EXT:cmi5/Resources/Public/CmiFive/Js/spoken-word.js
+	}
+}
+
+module.tx_t3sbootstrap {
+	view {
+		templateRootPaths.10 = EXT:cmi5/Resources/Private/Backend/Templates/
+		partialRootPaths.10 = EXT:cmi5/Resources/Private/Backend/Partials/
+	}
+}

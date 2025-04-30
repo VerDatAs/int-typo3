@@ -1,0 +1,14 @@
+page {
+	# Page template
+	10 = FLUIDTEMPLATE
+	10 {
+		file = EXT:cmi5/Resources/Private/Templates/Main.html
+	}
+}
+page {
+    10 {
+		dataProcessing {
+			70.if.isTrue = {$bootstrap.config.recentlyUpdatedContentElements}
+		}
+	}
+}

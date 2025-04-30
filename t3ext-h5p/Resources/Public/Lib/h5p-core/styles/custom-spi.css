@@ -1,0 +1,83 @@
+.h5p-agamotto .h5p-agamotto-passepartout-horizontal {
+  padding: 0 !important;
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button,
+.h5peditor .h5p-joubelui-button,
+.h5p-joubelui-button {
+  border-radius: 5px !important;
+  background: #005C45CC !important;
+  color: #ffffff !important;
+}
+
+.card-footer svg path {
+  color: #005C45CC !important;
+}
+
+.card-footer svg {
+  cursor: pointer;
+}
+
+.h5peditor .h5p-questionnaire-button,
+.h5p-questionnaire-button {
+  background: #005C45CC !important;
+  border-width: 0 !important;
+}
+
+html.h5p-iframe .h5p-container.h5p-questionnaire-wrapper,
+.h5p-documentation-tool {
+  overflow: hidden;
+  /* border: 1px solid #ddd !important;
+    border-radius: 5px !important; */
+}
+
+.h5p-questionnaire-footer {
+  background: #fff !important;
+  border-width: 0 !important;
+}
+
+.joubel-simple-rounded-button {
+  background: #005C45CC !important;
+  border-radius: 5px !important;
+}
+
+.h5p-joubelui-score-bar-progress {
+  background: none !important;
+  background-color: rgb(200, 165, 175) !important;
+}
+
+.h5p-simple-multiple-choice-question,
+.h5p-questionnaire-required-symbol {
+  background: #004A78 !important;
+}
+
+.h5p-questionnaire-element .h5p-subcontent-body {
+  font-size: 1.5em !important;
+}
+
+.h5p-simple-multiple-choice-alternative-input {
+  margin: 0 10px 2px 5px !important;
+}
+
+.h5p-true-false-answer {
+  background: #005c45 !important;
+  border-color: initial !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.progress-dot.answered {
+  background: #005c45 !important;
+}
+
+.progress-dot {
+  border: 1px solid #005c45 !important;
+}
+
+.h5p-content-user-data-reset-dialog {
+  display: none;
+}
+
+.h5p-drag-droppable-words {
+  line-height: 2em !important;
+}

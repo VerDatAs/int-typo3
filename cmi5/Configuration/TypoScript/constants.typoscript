@@ -1,0 +1,3 @@
+plugin.tx_t3sbootstrap.view.templateRootPath = EXT:t3sbootstrap/Resources/Private/Templates/
+plugin.tx_t3sbootstrap.view.partialRootPath = EXT:t3sbootstrap/Resources/Private/Partials/
+plugin.tx_t3sbootstrap.view.layoutRootPath = EXT:t3sbootstrap/Resources/Private/Layouts/

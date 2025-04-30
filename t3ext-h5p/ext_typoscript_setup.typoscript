@@ -1,0 +1,70 @@
+config.tx_extbase {
+    persistence {
+        classes {
+            MichielRoos\H5p\Domain\Model\Page {
+                mapping {
+                    tableName = pages
+                }
+            }
+
+            MichielRoos\H5p\Domain\Model\FileReference {
+                mapping {
+                    tableName = sys_file_reference
+                    columns {
+                        uid_local.mapOnProperty = originalFileIdentifier
+                    }
+                }
+            }
+        }
+    }
+
+    objects {
+        TYPO3\CMS\Extbase\Domain\Model\FileReference.className = MichielRoos\H5p\Domain\Model\FileReference
+    }
+}
+
+plugin.tx_h5p_view {
+    view {
+        templateRootPaths {
+            10 = EXT:h5p/Resources/Private/Templates/
+        }
+
+        layoutRootPaths {
+            10 = EXT:h5p/Resources/Private/Layouts/
+        }
+
+        partialRootPaths {
+            10 = EXT:h5p/Resources/Private/Partials/
+        }
+    }
+
+    persistence {
+        storagePid = 1
+    }
+}
+
+plugin.tx_h5p_statistics {
+    view < plugin.tx_h5p_view.view
+
+    persistence {
+        storagePid = 1
+    }
+}
+
+module.tx_h5p_web {
+    persistence {
+        storagePid = 1
+    }
+}
+
+api_h5p = PAGE
+api_h5p {
+    config {
+        disableAllHeaderCode = 1
+        debug = 1
+        no_cache = 1
+    }
+
+    typeNum = 1561098634614
+    10 < tt_content.list.20.h5p_ajax
+}

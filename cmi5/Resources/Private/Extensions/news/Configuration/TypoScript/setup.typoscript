@@ -1,0 +1,45 @@
+
+# **********************************************************
+#	EXT:news
+# **********************************************************
+
+plugin.tx_news {
+	view {
+		templateRootPaths {
+			2343 = EXT:t3sbootstrap/Resources/Private/Extensions/news/Resources/Private/Templates/
+		}
+		partialRootPaths {
+			2343 = EXT:t3sbootstrap/Resources/Private/Extensions/news/Resources/Private/Partials/
+		}
+		layoutRootPaths {
+			2343 = EXT:t3sbootstrap/Resources/Private/Extensions/news/Resources/Private/Layouts/
+		}
+	}
+
+	settings {
+		cssFile =
+		detail.lightbox.selection = {$bootstrap.config.lightboxSelection}
+		media.minWidth = {$bootstrap.image.minimumWidth}
+		loadingSpinner = {$bootstrap.config.loadingSpinner}
+		loadingSpinnerColor = {$bootstrap.config.loadingSpinnerColor}
+		loadingSpinnerPosition = top
+		srcsetDesktop = {$bootstrap.image.srcsetDesktop}
+		srcsetTablet = {$bootstrap.image.srcsetTablet}
+		srcsetMobile = {$bootstrap.image.srcsetMobile}
+		imgCopyright = {$bootstrap.extconf.imgCopyright}
+		lazyLoad = {$bootstrap.extconf.lazyLoad}
+		picturefill = {$bootstrap.image.picturefill}
+		magnifying = {$bootstrap.config.magnifying}
+		cdn = {$bootstrap.cdn.enable}
+		animateVersion = {$bootstrap.cdn.animate}
+		baguetteBoxVersion = {$bootstrap.cdn.baguetteBox}
+		glightboxVersion = {$bootstrap.cdn.glightbox}
+		halkaboxVersion = {$bootstrap.cdn.halkabox}
+		jqueryDisable = {$bootstrap.disable.jquery}
+	}
+
+	_LOCAL_LANG.de.more-link = mehr
+	_LOCAL_LANG.de.back-link = zurück
+	_LOCAL_LANG.de.dateFormat = {$bootstrap.config.dateFormat}
+	_LOCAL_LANG.de.search-text = Es liegen %1$s Ergebnisse für "%2$s" vor.
+}

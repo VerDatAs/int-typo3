@@ -1,0 +1,32 @@
+{
+  "name": "blx/cmi5",
+  "description": "Overrides the t3sbootstrap extension",
+  "keywords": [
+    "typo3",
+    "typo3 cms",
+    "bootstrap"
+  ],
+  "homepage": "https://blx.partners",
+  "authors": [
+    {
+      "name": "Peter Krämer",
+      "email": "robert.kraemer@blx.partners"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "type": "typo3-cms-extension",
+  "require": {
+    "php": "^8.1",
+    "t3sbs/t3sbootstrap": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "BLX\\Cmi5\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "cmi5"
+    }
+  }
+}

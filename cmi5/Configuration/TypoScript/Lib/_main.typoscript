@@ -1,0 +1,4 @@
+lib.printButton = COA
+lib.printButton {
+	10.value = <i class="fa-solid fa-print"></i>
+}

@@ -1,0 +1,136 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>Button Template</f:comment>
+<f:layout name="Button" />
+<f:section name="Main">
+<f:if condition="{fixedButton} && !{parentCType}">
+	<f:render partial="Page/Assets" arguments="{fixedbutton:'true', visiblePart:'0', btnGroup:'0'}" />
+</f:if>
+<f:if condition="{styleInline}">
+<f:asset.css identifier="t3sbs_button-{data.uid}">
+{styleInline -> f:format.raw()}
+</f:asset.css>
+</f:if>
+<f:if condition="{parentCType} == 'button_group'">
+	 <f:then>
+		<f:if condition="{slideInButton}">
+			<f:then>
+				<f:render section="ButtonGroup" arguments="{_all}" />
+			</f:then>
+			<f:else>
+				<f:render section="Default" arguments="{_all}" />
+			</f:else>
+		</f:if>
+	 </f:then>
+	 <f:else>
+		<f:if condition="{btn-block}">
+			<f:then>
+				<div class="d-grid">
+					<f:render section="Default" arguments="{_all}" />
+				</div>
+			</f:then>
+			<f:else>
+				<f:render section="Default" arguments="{_all}" />
+			</f:else>
+		</f:if>
+	 </f:else>
+</f:if>
+</f:section>
+</html>
+
+
+<f:section name="Default">
+<f:if condition="{headerPosition}">
+	<f:then>
+		<div class="{headerPosition}">
+			<f:render section="Button" arguments="{_all}" />
+		</div>
+	</f:then>
+	<f:else>
+		<f:render section="Button" arguments="{_all}" />
+	</f:else>
+</f:if>
+</f:section>
+
+<f:section name="Button">
+<f:if condition="{dropdownItems}">
+	<f:then>
+		<f:if condition="{parentCType} == 'button_group'">
+			 <f:then>
+			 	<div class="btn-group{f:if(condition: dropdowndirection,then: ' {dropdowndirection}')}" role="group">
+					<f:render section="ButtonGroupLink" arguments="{_all}" />
+			 	</div>	 
+			 </f:then>
+			 <f:else>
+				<f:render section="ButtonGroupLink" arguments="{_all}" />	 
+			 </f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:link.typolink
+			parameter="{data.header_link}"
+			class="{trimClass}"
+			title="{linkTitle}"
+			additionalAttributes="{id: 'c{data.uid}', role: 'button'}">
+			{headerFontawesome -> f:format.raw()} {data.header -> f:format.raw()}
+		</f:link.typolink>
+	</f:else>
+</f:if>
+</f:section>
+
+<f:section name="ButtonGroup">
+<f:if condition="{headerPosition}">
+	<f:then>
+		<div class="{headerPosition}">
+			<f:render section="ButtonInGroup" arguments="{_all}" />
+		</div>
+	</f:then>
+	<f:else>
+		<div class="position-relative">
+			<f:render section="ButtonInGroup" arguments="{_all}" />
+		</div>
+	</f:else>
+</f:if>
+</f:section>
+
+<f:section name="ButtonInGroup">
+<f:if condition="{slideInButtonFaIcon}">
+	<f:then>
+		<f:link.typolink
+			parameter="{data.header_link}"
+			class="m-0 rounded-0{class}"
+			title="{linkTitle}"
+			additionalAttributes="{id: 'c{data.uid}', role: 'button'}">
+			{headerFontawesome -> f:format.raw()} {data.header -> f:format.raw()}
+		</f:link.typolink>
+	</f:then>
+	<f:else>
+		<f:link.typolink
+			parameter="{data.header_link}"
+			class="m-0 rounded-0{class}"
+			title="{linkTitle}"
+			additionalAttributes="{id: 'c{data.uid}', role: 'button'}">
+			<i class="fa-solid fa-ban text-danger me-1"></i> {data.header -> f:format.raw()}
+		</f:link.typolink>
+	</f:else>
+</f:if>
+</f:section>
+
+<f:section name="ButtonGroupLink">
+	<f:link.typolink
+		parameter="{data.header_link}"
+		class="{trimClass} dropdown-toggle"
+		title="{linkTitle}"
+		additionalAttributes="{id: 'c{data.uid}', role: 'button', data-bs-toggle: 'dropdown', aria-expanded: 'false'}">
+		{headerFontawesome -> f:format.raw()} {data.header -> f:format.raw()}
+	</f:link.typolink>
+	<ul class="dropdown-menu" aria-labelledby="c{data.uid}">
+		<f:for each="{dropdownItems}" as="dropdownItem">
+			<li>				
+				<f:link.typolink parameter="{dropdownItem.link}" class="dropdown-item {dropdownItem.class}" target="{dropdownItem.target}">
+					{dropdownItem.title}
+				</f:link.typolink>
+			</li>
+		</f:for>
+	</ul>
+</f:section>
+
